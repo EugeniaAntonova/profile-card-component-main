@@ -134,7 +134,7 @@ hr {
 }
 @media (min-width: 1600px) {
     .main {
-        background-position: top  left, bottom right;
+        background-position: top -250px left, bottom -300px right;
     }
 }
 
