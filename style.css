@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap);
+
+.card,
+.decor,
+.main,
+.person,
+.stat,
+.stats,
+body {
+    display: grid
+}
+
+.text,
+.title,
+body,
+hr {
+    margin: 0
+}
+
+:root {
+    --main: hsl(185, 75%, 39%);
+    --accent: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%)
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    max-width: 100vw;
+    grid-template: 1fr;
+    overflow-x: hidden;
+    font-family: "Kumbh Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "YOPQ" 300
+}
+
+img {
+    display: block;
+    max-width: 100%
+}
+
+.main {
+    height: 100%;
+    padding-inline: 24px;
+    place-items: center;
+    background-repeat: no-repeat;
+    background-color: var(--main);
+    background-size: 800px 800px;
+    background-position: -500px -500px, 30vw 50vh;
+    background-image: url('./images/bg-pattern-top.svg'), url('./images/bg-pattern-bottom.svg')
+}
+
+.card {
+    width: 100%;
+    max-width: 350px;
+    grid-template-rows: 140px 235px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff
+}
+
+.text {
+    color: var(--dark-gray);
+    font-size: 14px
+}
+
+.attribution,
+.title {
+    color: var(--accent)
+}
+
+h1.title {
+    margin-bottom: 8px
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700
+}
+
+.light {
+    font-weight: 400
+}
+
+.decor {
+    background-image: url('./images/bg-pattern-card.svg');
+    justify-items: center;
+    align-items: end
+}
+
+.decor>img {
+    border-radius: 50%;
+    border: 4px solid #fff;
+    translate: 0 50%
+}
+
+.person {
+    padding: 74px 24px 24px;
+    justify-items: center
+}
+
+.stats {
+    padding: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    justify-content: center
+}
+
+.stat {
+    justify-items: center
+}
+
+.stat span {
+    font-size: 12px;
+    letter-spacing: .03em
+}
+
+hr {
+    border: none;
+    border-top: 1px solid hsl(0deg 0% 85.83%)
+}
+
+@media (min-width: 700px) {
+    .main {
+        background-position: top -400px left -300px, bottom -400px right -300px;
+    }
+}
+@media (min-width: 1200px) {
+    .main {
+        background-position: top -250px left -100px, bottom -300px right -100px;
+    }
+}
+
+.attribution {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    translate: -50% 0;
+    font-size: 12px;
+    text-align: center
+}
+
+.attribution a {
+    color: #fff
+}
